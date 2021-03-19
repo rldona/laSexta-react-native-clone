@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Pressable, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Pressable, ImageBackground } from 'react-native';
+
+import * as WebBrowser from 'expo-web-browser';
 
 export default function DirectoScreen() {
-
-  const onPressFunction = () => {
-    alert('ok');
+  const onPressFunction = async() => {
+    let result = await WebBrowser.openBrowserAsync('https://www.atresplayer.com');
+    console.log(result);
   }
 
   return (

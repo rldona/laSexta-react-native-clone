@@ -1,13 +1,23 @@
 import React from 'react';
-import { StyleSheet, View, Text, ImageBackground } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Card() {
+  const navigation = useNavigation();
+
+  const onPressFunction = async() => {
+    console.log('card pressed');
+    navigation.navigate('Detail');
+  }
+
   return (
     <View style={styles.containerImage}>
-      <ImageBackground source={require('../../assets/congreso.jpg')} style={styles.cover}></ImageBackground>
-      <View style={styles.containerText}>
-        <Text style={styles.h1}>España ya tiene ley de Eutanasia: ¿qué supone? ¿cuándo entre en vigor?, ¿quién podrá solicitarla?</Text>
-      </View>
+      <Pressable onPress={onPressFunction} style={styles.button}>
+        <ImageBackground source={require('../../assets/congreso.jpg')} style={styles.cover}></ImageBackground>
+        <View style={styles.containerText}>
+          <Text style={styles.h1}>España ya tiene ley de Eutanasia: ¿qué supone? ¿cuándo entre en vigor?, ¿quién podrá solicitarla?</Text>
+        </View>
+      </Pressable>
     </View>
   );
 };

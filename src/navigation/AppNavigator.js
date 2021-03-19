@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -20,7 +20,7 @@ export default function AppNavigator() {
     <View style={styles.container}>
       <Header></Header>
       <HeaderPlayer></HeaderPlayer>
-      <NavigationContainer>
+      <View style={{ flex: 1 }}>
         <Tab.Navigator
           tabBarOptions={{
             activeTintColor: '#00b023',
@@ -70,7 +70,7 @@ export default function AppNavigator() {
             }}
           />
         </Tab.Navigator>
-      </NavigationContainer>
+      </View>
     </View>
   );
 };

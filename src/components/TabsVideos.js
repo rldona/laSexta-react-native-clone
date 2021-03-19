@@ -4,26 +4,28 @@ import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 
 import Card from "./Card";
 
-const FirstRoute = () => (
-  <View style={styles.scene}>
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-    </ScrollView>
-  </View>
-);
+const FirstRoute = () => {
+  return (
+    <View style={styles.scene}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </ScrollView>
+    </View>
+  )
+};
 
 const SecondRoute = () => (
   <View style={styles.scene}>
@@ -88,7 +90,7 @@ export default function TabViewExample() {
     return (
       <TabBar
         {...props}
-        style={{ backgroundColor: '#DDD', elevation: 0, borderColor: '#DDD', borderBottomWidth: 1, height: 50 }}
+        style={{ backgroundColor: '#EEE', elevation: 0, borderColor: '#DDD', borderBottomWidth: 1, height: 50 }}
         labelStyle={{ fontSize: 14, fontWeight: 'bold' }}
         indicatorStyle={{ backgroundColor: '#00b023', height: 4 }}
         activeColor={'#222'}
