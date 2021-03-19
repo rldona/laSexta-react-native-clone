@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
-        <Image source={require('../../../assets/icon-la-sexta.png')} style={styles.logo}></Image>
+        <Image source={require('../../assets/icon-la-sexta.png')} style={styles.logo}></Image>
         <View style={styles.firma}>
           <Text style={styles.firmaTitle}>FIRMA OBJETIVO 2%</Text>
         </View>

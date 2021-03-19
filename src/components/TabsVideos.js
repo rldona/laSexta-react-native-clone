@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 
-import Card from "../Card";
+import Card from "./Card";
 
 const FirstRoute = () => (
   <View style={styles.scene}>
@@ -113,6 +113,7 @@ export default function TabViewExample() {
 const styles = StyleSheet.create({
   scene: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#FFF'
   }
 });

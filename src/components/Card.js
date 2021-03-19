@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ImageBackground } from 'react-native';
 export default function Card() {
   return (
     <View style={styles.containerImage}>
-      <ImageBackground source={require('../../../assets/congreso.jpg')} style={styles.cover}></ImageBackground>
+      <ImageBackground source={require('../../assets/congreso.jpg')} style={styles.cover}></ImageBackground>
       <View style={styles.containerText}>
         <Text style={styles.h1}>España ya tiene ley de Eutanasia: ¿qué supone? ¿cuándo entre en vigor?, ¿quién podrá solicitarla?</Text>
       </View>
