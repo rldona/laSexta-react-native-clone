@@ -1,63 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import VideosScreen from "./src/screens/VideosScreen";
+import AlertasScreen from "./src/screens/AlertasScreen";
+import EscuchaScreen from "./src/screens/EscuchaScreen";
+import DirectoScreen from "./src/screens/DirectoScreen";
 
 import Header from "./src/components/Header";
-import Card from "./src/components/Card";
 
 const Tab = createBottomTabNavigator();
 
-// Screens
-
-// 1. Videos
-function VideosScreen() {
-  return (
-    <View style={styles.cardList}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </ScrollView>
-    </View>
-  );
-}
-
-// 2. Alertas
-function AlertasScreen() {
-  return (
-    <Text>Alertas</Text>
-  );
-}
-
-// 3. Escucha laSexta
-function EscuchaScreen() {
-  return (
-    <Text>Escucha laSexta</Text>
-  );
-}
-
-// 4. Directo
-function DirectoScreen() {
-  return (
-    <Text>Directo</Text>
-  );
-}
-
-function MyTabs() {
+function LaSextaTabs() {
   return (
     <View style={styles.container}>
       <Header></Header>
@@ -68,7 +24,7 @@ function MyTabs() {
             component={VideosScreen}
             options={{
               tabBarLabel: 'Videos',
-              tabBarIcon: ({ color, size }) => (
+              tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="youtube-tv" color={color} size={26} />
               )
             }}
@@ -78,7 +34,7 @@ function MyTabs() {
             component={AlertasScreen}
             options={{
               tabBarLabel: 'Alertas',
-              tabBarIcon: ({ color, size }) => (
+              tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="bell-alert" color={color} size={26} />
               ),
             }}
@@ -88,7 +44,7 @@ function MyTabs() {
             component={EscuchaScreen}
             options={{
               tabBarLabel: 'Escucha laSexta',
-              tabBarIcon: ({ color, size }) => (
+              tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="volume-high" color={color} size={26} />
               ),
             }}
@@ -98,7 +54,7 @@ function MyTabs() {
             component={DirectoScreen}
             options={{
               tabBarLabel: 'Directo',
-              tabBarIcon: ({ color, size }) => (
+              tabBarIcon: ({ color }) => (
                 <MaterialCommunityIcons name="arrow-right-bold-outline" color={color} size={26} />
               ),
             }}
@@ -111,7 +67,7 @@ function MyTabs() {
 
 export default function App() {
   return (
-    <MyTabs />
+    <LaSextaTabs />
   );
 }
 
@@ -120,9 +76,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: 92
-  },
-  cardList: {
-    display: 'flex',
-    alignItems: 'center'
   }
 });

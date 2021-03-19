@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
-      <Image source={require('../../../assets/icon-la-sexta.png')} style={styles.logo}></Image>        
+      <Image source={require('../../../assets/icon-la-sexta.png')} style={styles.logo}></Image>
       <View style={styles.firma}>
         <Text style={styles.firmaTitle}>FIRMA OBJETIVO 2%</Text>
       </View>
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     height: 92,
     paddingTop: 50,
     paddingLeft: 15,
-    paddingRight: 10,
+    paddingRight: 15,
     zIndex: 9999
   },
   row: {
@@ -38,13 +38,15 @@ const styles = StyleSheet.create({
     marginTop: 8
   },
   firma: {
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: '#FFF',
-    padding: 5
+    paddingTop: 5,
+    paddingBottom: 5
   },
   firmaTitle: {
     color: '#FFF',
     fontSize: 18,
+    fontWeight: '600',
   },
   logo: {
     width: 120,
