@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ImageBackground, Pressable, Text } from 'react-native';
+import { Share, StyleSheet, View, ImageBackground, Pressable, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -17,6 +17,27 @@ export default function DetailScreen() {
     console.log(social);
   }
 
+  const onShare = async() => {
+    try {
+      const result = await Share.share({
+        message:
+          'React Native | A framework for building native apps using React',
+      })
+
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
   return (
     <View style={styles.cardList}>
       <View style={styles.goBackIcon}>
@@ -26,7 +47,7 @@ export default function DetailScreen() {
       <ImageBackground source={require('../../assets/congreso.jpg')} style={styles.cover}></ImageBackground>
 
       <View style={styles.socialContainer}>
-        <Pressable onPress={() => onPressSocial('share')} style={styles.socialButton}>
+        <Pressable onPress={() => onShare()} style={styles.socialButton}>
           <View style={styles.center}>
             <MaterialCommunityIcons name="share-variant" color={'#FFF'} size={30} />
           </View>
