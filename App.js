@@ -10,6 +10,7 @@ import EscuchaScreen from "./src/screens/EscuchaScreen";
 import DirectoScreen from "./src/screens/DirectoScreen";
 
 import Header from "./src/components/Header";
+import HeaderPlayer from "./src/components/HeaderPlayer";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +18,7 @@ function LaSextaTabs() {
   return (
     <View style={styles.container}>
       <Header></Header>
+      <HeaderPlayer></HeaderPlayer>
       <NavigationContainer>
         <Tab.Navigator>
           <Tab.Screen
@@ -75,6 +77,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: 92
+    paddingTop: 90
   }
 });

@@ -1,34 +1,18 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import Card from "../components/Card";
+import TabsVideos from '../components/TabsVideos';
 
 export default function VideosScreen() {
   return (
     <View style={styles.cardList}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </ScrollView>
+      <TabsVideos></TabsVideos>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   cardList: {
-    display: 'flex',
-    alignItems: 'center'
+    flex: 1,
   }
 });
