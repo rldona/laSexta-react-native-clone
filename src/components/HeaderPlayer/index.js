@@ -6,9 +6,14 @@ export default function HeaderPlayer() {
   return (
     <View style={styles.container}>
       <View style={styles.headerPlayerWidget}>
-        <View>
-          <Text style={styles.headerPlayerText}>laSexta Noticias 14:00</Text>
-          <Text style={styles.headerPlayerText}>de 14:00 a 15:00</Text>
+        <View style={styles.infoButton}>
+          <View style={styles.squareButton}>
+            <MaterialCommunityIcons name="square" color={'#000'} size={13} style={{ 'paddingTop': 8 }}/>
+          </View>
+          <View style={{ 'marginLeft': 20 }}>
+            <Text style={styles.headerPlayerText}>laSexta Noticias 14:00</Text>
+            <Text style={styles.headerPlayerText}>de 14:00 a 15:00</Text>
+          </View>
         </View>
         <MaterialCommunityIcons name="close" color={'#555'} size={26} />
       </View>
@@ -22,12 +27,7 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: 15,
     borderTopWidth: 4,
-    borderColor: '#00b023'
-  },
-  row: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    borderColor: '#00b023',
   },
   title: {
     color: '#FFF',
@@ -58,6 +58,20 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+  },
+  squareButton: {
+    width: 30,
+    height: 30,
+    backgroundColor: '#FFF',
+    borderRadius: 50,
+    alignItems: 'center',
+  },
+  infoButton: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    alignContent: 'center',
   }
 });

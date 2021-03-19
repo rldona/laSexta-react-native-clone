@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     marginTop: 50,
-    marginBottom: 60,
+    marginBottom: 30,
     width: 280,
     height: 280,
     resizeMode: 'cover'
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00b023', // '#00872c', '#00d801'
     padding: 18,
     width: 330,
-    marginTop: 70,
+    marginTop: 40,
     display: 'flex',
     alignItems: 'center'
   },
