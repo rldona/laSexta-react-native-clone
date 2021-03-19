@@ -1,13 +1,22 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image, Pressable } from 'react-native';
+
+import * as WebBrowser from 'expo-web-browser';
 
 export default function Header() {
+  const onPressFunction = async() => {
+    let result = await WebBrowser.openBrowserAsync('https://www.lasexta.com/constantes-vitales/causas/objetivo-ciencia/firma-elevar-pib-espanol-inversion-ciencia_202010165f89665bdf72120001c2ad3a.html');
+    console.log(result);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.row}>
         <Image source={require('../../assets/icon-la-sexta.png')} style={styles.logo}></Image>
         <View style={styles.firma}>
-          <Text style={styles.firmaTitle}>FIRMA OBJETIVO 2%</Text>
+          <Pressable onPress={onPressFunction} style={styles.button}>
+            <Text style={styles.firmaTitle}>FIRMA OBJETIVO 2%</Text>
+          </Pressable>
         </View>
       </View>
     </View>
