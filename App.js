@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -12,6 +11,7 @@ import Card from "./src/components/Card";
 const Tab = createBottomTabNavigator();
 
 // Screens
+
 // 1. Videos
 function VideosScreen() {
   return (
@@ -35,18 +35,21 @@ function VideosScreen() {
     </View>
   );
 }
+
 // 2. Alertas
 function AlertasScreen() {
   return (
     <Text>Alertas</Text>
   );
 }
+
 // 3. Escucha laSexta
 function EscuchaScreen() {
   return (
     <Text>Escucha laSexta</Text>
   );
 }
+
 // 4. Directo
 function DirectoScreen() {
   return (
