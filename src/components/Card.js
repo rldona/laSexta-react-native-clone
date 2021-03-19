@@ -14,17 +14,19 @@ export default function Card() {
 
 const styles = StyleSheet.create({
   containerImage: {
-    width: 380,
+    width: '100%',
     shadowColor: '#000',
-    marginTop: 10,
+    marginTop: 15,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 1,
     },
+    paddingLeft: 10,
+    paddingRight: 10,
     shadowOpacity: 0.22,
     shadowRadius: 4.22,
-    elevation: 5,
+    elevation: 10,
   },
   cover: {
     width: 380,
