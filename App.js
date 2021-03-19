@@ -24,6 +24,13 @@ function VideosScreen() {
         <Card></Card>
         <Card></Card>
         <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
       </ScrollView>
     </View>
   );
@@ -53,8 +60,8 @@ function MyTabs() {
       <Header></Header>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen 
-            name="Videos" 
+          <Tab.Screen
+            name="Videos"
             component={VideosScreen}
             options={{
               tabBarLabel: 'Videos',
@@ -63,8 +70,8 @@ function MyTabs() {
               )
             }}
           />
-          <Tab.Screen 
-            name="Alertas" 
+          <Tab.Screen
+            name="Alertas"
             component={AlertasScreen}
             options={{
               tabBarLabel: 'Alertas',
@@ -73,25 +80,25 @@ function MyTabs() {
               ),
             }}
           />
-          <Tab.Screen 
-            name="Escucha laSexta" 
+          <Tab.Screen
+            name="Escucha laSexta"
             component={EscuchaScreen}
             options={{
               tabBarLabel: 'Escucha laSexta',
               tabBarIcon: ({ color, size }) => (
                 <MaterialCommunityIcons name="volume-high" color={color} size={26} />
               ),
-            }}          
+            }}
           />
-          <Tab.Screen 
-            name="Directo" 
+          <Tab.Screen
+            name="Directo"
             component={DirectoScreen}
             options={{
               tabBarLabel: 'Directo',
               tabBarIcon: ({ color, size }) => (
                 <MaterialCommunityIcons name="arrow-right-bold-outline" color={color} size={26} />
               ),
-            }}          
+            }}
           />
         </Tab.Navigator>
       </NavigationContainer>
