@@ -6,7 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 export default function EscuchaScreen() {
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('../../assets/escucha-image.jpeg')} style={styles.cover}>
+      <ImageBackground source={require('../../assets/escucha-image-gradient.png')} style={styles.cover}>
         <View style={styles.info}>
           <Text style={styles.h1}>Más Vale Tarde</Text>
           <Text style={styles.h2}>Programa diario dirigido y presentado por Mamen Mendizábal que vive pegado a la noticia, analiza...</Text>
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   cover: {
     width: '100%',
-    height: 300,
+    height: 350,
     resizeMode: 'cover',
   },
   info: {

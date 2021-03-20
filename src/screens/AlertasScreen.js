@@ -30,7 +30,7 @@ export default function AlertasScreen() {
             box={false}
             circleSize={16}
             boxStyle={{ marginBottom: 25 }}
-            duration={0}
+            duration={250}
             animationTypes={['zoomIn']}
             activeColor={ '#00b023' }
             boxDeactiveBgColor={ 'transparent' }
@@ -45,13 +45,13 @@ export default function AlertasScreen() {
       <View>
         <Text style={styles.title}>Alertas del 19/03/2021</Text>
         <View style={styles.alert}>
-          <Text style={styles.alertH1}>¿Qienes son los comunistas?</Text>
-          <Text style={styles.alertText}>Estos son los comunistas de España que tanto...</Text>
+          <Text style={styles.alertH1}>Riesgo en MIYAGI</Text>
+          <Text style={styles.alertText}>Japón sufre un terremoto de magnitud 7,2 y activa...</Text>
           <Text style={styles.alertTime}>13:26</Text>
         </View>
         <View style={styles.alert}>
-          <Text style={styles.alertH1}>¿Qienes son los comunistas?</Text>
-          <Text style={styles.alertText}>Estos son los comunistas de España que tanto...</Text>
+        <Text style={styles.alertH1}>Riesgo en MIYAGI</Text>
+          <Text style={styles.alertText}>Japón sufre un terremoto de magnitud 7,2 y activa...</Text>
           <Text style={styles.alertTime}>13:26</Text>
         </View>
       </View>
