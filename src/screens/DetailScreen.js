@@ -69,7 +69,13 @@ export default function DetailScreen() {
         </Pressable>
       </View>
 
-      <ScrollView>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingTop: 25,
+          paddingBottom: 50,
+        }}
+      >
         <Text style={[styles.text, styles.light, styles.h3, styles.uppecarse]}>Interrumpida esta semana</Text>
         <Text style={[styles.text, styles.h1, styles.bold]}>La Comisión de Salud Pública valora a qué grupos administrar AstraZeneca ante la reanudación de la vacunación</Text>
         <Text style={[styles.text, styles.h2, styles.light]}>Ante la reanudación de la vacunación con AstraZeneca el próximo miércoles, los expertos se reúnen para determinar si esta no debe administrarse a ciertos grupos, como las mujeres jóvenes.</Text>
@@ -104,7 +110,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 25
   },
   socialButton: {
     width: '25%',
@@ -147,5 +152,19 @@ const styles = StyleSheet.create({
   },
   h3: {
     fontSize: 12
-  }
+  },
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5
+  },
+  buttonText: {
+    fontSize: 18,
+    fontFamily: 'Gill Sans',
+    textAlign: 'center',
+    margin: 10,
+    color: '#ffffff',
+    backgroundColor: 'transparent',
+  },
 });
