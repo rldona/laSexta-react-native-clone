@@ -15,7 +15,7 @@ import HeaderPlayer from "../components/HeaderPlayer";
 
 const Tab = createBottomTabNavigator();
 
-export default function AppNavigator() {
+export default function TabNavigator() {
   return (
     <View style={styles.container}>
       <Header></Header>

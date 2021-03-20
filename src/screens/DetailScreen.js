@@ -41,10 +41,10 @@ export default function DetailScreen() {
   return (
     <View style={styles.cardList}>
       <View style={styles.goBackIcon}>
-        <MaterialCommunityIcons name="chevron-left" color={'#FFF'} size={55} onPress={onPressButton} />
+        <MaterialCommunityIcons name="chevron-left" color={'#FFF'} size={50} onPress={onPressButton} />
       </View>
 
-      <ImageBackground source={require('../../assets/congreso.jpg')} style={styles.cover}></ImageBackground>
+      <ImageBackground source={require('../../assets/news-cover.jpg')} style={styles.cover}></ImageBackground>
 
       <View style={styles.socialContainer}>
         <Pressable onPress={() => onShare()} style={styles.socialButton}>
@@ -70,7 +70,14 @@ export default function DetailScreen() {
       </View>
 
       <ScrollView>
-        <Text style={styles.h1}>España ya tiene ley de Eutanasia: ¿qué supone? ¿cuándo entre en vigor?, ¿quién podrá solicitarla?</Text>
+        <Text style={[styles.text, styles.light, styles.h3, styles.uppecarse]}>Interrumpida esta semana</Text>
+        <Text style={[styles.text, styles.h1, styles.bold]}>La Comisión de Salud Pública valora a qué grupos administrar AstraZeneca ante la reanudación de la vacunación</Text>
+        <Text style={[styles.text, styles.h2, styles.light]}>Ante la reanudación de la vacunación con AstraZeneca el próximo miércoles, los expertos se reúnen para determinar si esta no debe administrarse a ciertos grupos, como las mujeres jóvenes.</Text>
+        <Text style={[styles.text, styles.h3]}>laSexta.com Madrid | Sábado, 20 marzo, 2021 09:00</Text>
+        <Text style={[styles.text]}>España prevé reanudar el próximo miércoles la administración de la vacuna de Oxford y AstraZeneca, a expensas de que la Comisión de Salud Pública determine este fin de semana a qué grupos de la población. Según ha podido saber laSexta, los expertos podrían recomendar que esta vacuna contra el coronavirus no se administre a ciertos colectivos, como las mujeres jóvenes. No obstante, todavía no hay decidida una edad concreta en la que establecer ese posible umbral etario. La Comisión, en la que se encuentran representadas tanto las autonomías como el Ministerio de Sanidad, podría recomendar su uso para mayores de 55 años, ya que hasta ahora venía administrándose solo en personas más jóvenes.</Text>
+        <Text style={[styles.text]}>Los expertos abordarán estas cuestiones después de que el Consejo Interterritorial acordara el jueves reanudar la vacunación con AstraZeneca la próxima semana, ante la conclusión de la Agencia Europea del Medicamento (EMA) de que sus beneficios son superiores a sus riesgos y de que la vacuna es "eficaz y segura". Una decisión del organismo regulador europeo que llegaba después de que el lunes Sanidad decidiera paralizar la vacunación con AstraZeneca durante 15 días, de forma preventiva, tras detectar eventos trombóticos tras su administración.</Text>
+        <Text style={[styles.text]}>Ahora, la Ponencia de Vacunas y la Comisión de Salud Pública se reunirán para examinar la nueva ficha técnica de la EMA y valorar si la vacuna no debe administrarse en algún colectivo por esos trombos. En este sentido, la directora de la Agencia Española de Medicamentos y Productos Sanitarios (AEMPS), María Jesús Lamas, ya avanzó esta semana que ahora la ficha técnica de la vacuna contempla indicaciones sobre posibles trombosis, principalmente en menores de 55 años y mujeres.</Text>
+        <Text style={[styles.text]}>[Siguiente Noticia]</Text>
       </ScrollView>
     </View>
   );
@@ -89,7 +96,7 @@ const styles = StyleSheet.create({
   goBackIcon: {
     position: 'absolute',
     top: 40,
-    left: 5,
+    left: 0,
     zIndex: 999
   },
   socialContainer: {
@@ -97,6 +104,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 25
   },
   socialButton: {
     width: '25%',
@@ -115,5 +123,29 @@ const styles = StyleSheet.create({
   center: {
     alignItems: 'center',
     marginTop: 10
+  },
+  text: {
+    fontSize: 16,
+    marginBottom: 15,
+    paddingLeft: 15,
+    paddingRight: 15
+  },
+  uppecarse: {
+    textTransform: 'uppercase'
+  },
+  bold: {
+    fontWeight: '700'
+  },
+  light: {
+    fontWeight: '300'
+  },
+  h1: {
+    fontSize: 20
+  },
+  h2: {
+    fontSize: 18
+  },
+  h3: {
+    fontSize: 12
   }
 });
