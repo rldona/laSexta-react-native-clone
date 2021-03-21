@@ -1,0 +1,1 @@
+export const SET_PLAYER_VISIBLE = 'SET_PLAYER_VISIBLE'
