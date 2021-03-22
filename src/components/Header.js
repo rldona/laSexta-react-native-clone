@@ -14,7 +14,7 @@ export default function Header() {
       <View style={styles.row}>
         <Image source={require('../../assets/icon-la-sexta.png')} style={styles.logo}></Image>
         <View style={styles.firma}>
-          <Pressable onPress={onPressFunction} style={styles.button}>
+          <Pressable onPress={onPressFunction}>
             <Text style={styles.firmaTitle}>FIRMA OBJETIVO 2%</Text>
           </Pressable>
         </View>

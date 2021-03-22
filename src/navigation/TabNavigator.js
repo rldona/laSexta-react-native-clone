@@ -13,13 +13,21 @@ import DirectoScreen from "../screens/DirectoScreen";
 import Header from "../components/Header";
 import HeaderPlayer from "../components/HeaderPlayer";
 
+import { useSelector } from 'react-redux';
+
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
+  const { options } = useSelector(state => state);
+
+  console.log(options.playerIsVisible);
+
   return (
     <View style={styles.container}>
       <Header></Header>
-      <HeaderPlayer></HeaderPlayer>
+      {
+        options.playerIsVisible ? <HeaderPlayer></HeaderPlayer> : null
+      }
       <View style={{ flex: 1 }}>
         <Tab.Navigator
           tabBarOptions={{

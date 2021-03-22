@@ -7,7 +7,13 @@ import Card from "./Card";
 const FirstRoute = () => {
   return (
     <View style={styles.scene}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingTop: 20,
+          paddingBottom: 10,
+        }}
+      >
         <Card></Card>
         <Card></Card>
         <Card></Card>
@@ -29,7 +35,13 @@ const FirstRoute = () => {
 
 const SecondRoute = () => (
   <View style={styles.scene}>
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{
+        paddingTop: 25,
+        paddingBottom: 25,
+      }}
+    >
       <Card></Card>
       <Card></Card>
       <Card></Card>
@@ -50,7 +62,13 @@ const SecondRoute = () => (
 
 const ThirdRoute = () => (
   <View style={styles.scene}>
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{
+        paddingTop: 25,
+        paddingBottom: 25,
+      }}
+    >
       <Card></Card>
       <Card></Card>
       <Card></Card>

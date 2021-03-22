@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   containerImage: {
     width: '100%',
     shadowColor: '#000',
-    marginTop: 15,
+    marginBottom: 15,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,

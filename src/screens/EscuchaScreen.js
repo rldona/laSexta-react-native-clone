@@ -1,9 +1,19 @@
 import React from 'react';
-import { StyleSheet, View, Text, ImageBackground, Dimensions } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, Pressable } from 'react-native';
+
+import { useSelector, useDispatch } from 'react-redux'
+import { setPlayerVisible } from '../redux/actions/optionsActions'
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function EscuchaScreen() {
+  const { options } = useSelector(state => state);
+  const dispatch = useDispatch();
+
+  const toggleShowPlayer = () => {
+    dispatch(setPlayerVisible(!options.playerIsVisible));
+  }
+
   return (
     <View style={styles.container}>
       <ImageBackground source={require('../../assets/escucha-image-gradient.png')} style={styles.cover}>
@@ -14,9 +24,15 @@ export default function EscuchaScreen() {
         </View>
       </ImageBackground>
       <View style={styles.player}>
-        <View style={styles.squareButton}>
-          <MaterialCommunityIcons name="square" color={'#FFF'} size={23} style={{ 'paddingTop': 18 }}/>
-        </View>
+        <Pressable onPress={toggleShowPlayer} style={styles.button}>
+          <View style={styles.squareButton}>
+            {
+              options.playerIsVisible ?
+                <MaterialCommunityIcons name="square" color={'#FFF'} size={23} style={{ 'paddingTop': 18 }}/> :
+                <MaterialCommunityIcons name="play" color={'#FFF'} size={38} style={{ 'paddingTop': 12 }}/>
+            }
+          </View>
+        </Pressable>
         <View style={styles.timer}>
           <Text style={{ color: '#00b023', fontWeight: '700', fontSize: 13 }}>17:15</Text>
           <Text style={{ color: '#00b023', fontWeight: '700', fontSize: 13 }}>20:00</Text>
