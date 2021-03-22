@@ -6,7 +6,6 @@ export default function Card() {
   const navigation = useNavigation();
 
   const onPressFunction = async() => {
-    console.log('card pressed');
     navigation.navigate('Detail');
   }
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Share, StyleSheet, View, ImageBackground, Pressable, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -9,7 +8,6 @@ export default function DetailScreen() {
   const navigation = useNavigation();
 
   const onPressButton = () => {
-    console.log('pressed');
     navigation.goBack();
   }
 

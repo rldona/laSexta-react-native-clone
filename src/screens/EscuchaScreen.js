@@ -1,17 +1,20 @@
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground, Pressable } from 'react-native';
-
-import { useSelector, useDispatch } from 'react-redux'
-import { setPlayerVisible } from '../redux/actions/optionsActions'
-
+import { useSelector, useDispatch } from 'react-redux';
+import { setPlayerVisible, setPlaying } from '../redux/actions/optionsActions';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function EscuchaScreen() {
-  const { options } = useSelector(state => state);
   const dispatch = useDispatch();
+  const { options } = useSelector(state => state);
 
   const toggleShowPlayer = () => {
-    dispatch(setPlayerVisible(!options.playerIsVisible));
+    if (!options.isPlayerVisible) {
+      dispatch(setPlaying(!options.isPlaying));
+      dispatch(setPlayerVisible(!options.isPlayerVisible));
+    } else {
+      dispatch(setPlaying(!options.isPlaying));
+    }
   }
 
   return (
@@ -27,7 +30,7 @@ export default function EscuchaScreen() {
         <Pressable onPress={toggleShowPlayer} style={styles.button}>
           <View style={styles.squareButton}>
             {
-              options.playerIsVisible ?
+              options.isPlaying ?
                 <MaterialCommunityIcons name="square" color={'#FFF'} size={23} style={{ 'paddingTop': 18 }}/> :
                 <MaterialCommunityIcons name="play" color={'#FFF'} size={38} style={{ 'paddingTop': 12 }}/>
             }

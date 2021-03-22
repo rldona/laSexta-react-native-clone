@@ -1,7 +1,9 @@
-import { SET_PLAYER_VISIBLE } from "../actions/types/options";
+import { SET_PLAYER_VISIBLE, SET_PLAYING, SET_CURRENT_ROUTE } from "../actions/types/options";
 
 const initialState = {
-  playerIsVisible: false
+  isPlayerVisible: false,
+  isPlaying: false,
+  currentRoute: ''
 }
 
 function optionsReducer(state = initialState, action) {
@@ -9,7 +11,19 @@ function optionsReducer(state = initialState, action) {
     case SET_PLAYER_VISIBLE:
       return {
         ...state,
-        playerIsVisible: action.playerIsVisible
+        isPlayerVisible: action.isPlayerVisible
+      }
+
+    case SET_PLAYING:
+      return {
+        ...state,
+        isPlaying: action.isPlaying
+      }
+
+    case SET_CURRENT_ROUTE:
+      return {
+        ...state,
+        currentRoute: action.currentRoute
       }
 
     default:
@@ -17,4 +31,4 @@ function optionsReducer(state = initialState, action) {
   }
 }
 
-export default optionsReducer
+export default optionsReducer;

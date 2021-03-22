@@ -1,8 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-// import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { useSelector } from 'react-redux';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import VideosScreen from "../screens/VideosScreen";
@@ -13,20 +12,16 @@ import DirectoScreen from "../screens/DirectoScreen";
 import Header from "../components/Header";
 import HeaderPlayer from "../components/HeaderPlayer";
 
-import { useSelector } from 'react-redux';
-
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
   const { options } = useSelector(state => state);
 
-  console.log(options.playerIsVisible);
-
   return (
     <View style={styles.container}>
       <Header></Header>
       {
-        options.playerIsVisible ? <HeaderPlayer></HeaderPlayer> : null
+        options.isPlayerVisible && options.currentRoute !== 'Escucha laSexta' ? <HeaderPlayer></HeaderPlayer> : null
       }
       <View style={{ flex: 1 }}>
         <Tab.Navigator
