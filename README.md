@@ -1,3 +1,3 @@
 # laSexta-clone
 
-Clone de la app de laSexta en React Native (Expo)
+Clone of the laSexta app in React Native (Expo)
